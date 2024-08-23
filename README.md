@@ -10,9 +10,9 @@ This should ideally work in both TypeScript and JavaScript. In TypeScript it is 
 
 ## Installation
 
-To install, run:
+To install as a node module for your application run:
 
-`npm install`
+`npm i @strbjun/nvalidators`
 
 ## How to use:
 
