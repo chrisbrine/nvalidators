@@ -7,8 +7,8 @@
   "scripts": {
     "build": "tsc && parcel build"
   },
-  "keywords": [],
-  "author": "strbjun",
+  "keywords": ["validation", "validator", "sanitizer", "operator", "stack", "chain"],
+  "author": "Chris Brine <chrisbrine.web@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chrisbrine/nvalidators"
@@ -17,5 +17,8 @@
   "devDependencies": {
     "typescript": "^5.5.4"
   },
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/chrisbrine/nvalidators/issues"
+  },
+  "description": "This creates validator support for any variable using either function chaining or stacks to process while allowing for validators, sanitizers, operators, and can customize it as needed. More enhancements coming soon."
 }
