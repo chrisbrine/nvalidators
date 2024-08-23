@@ -20,12 +20,8 @@ function maxNumber(param, max) {
 exports.validators = {
     minNumber: {
         func: minNumber,
-        args: true,
-        requiredArg: true,
     },
     maxNumber: {
         func: maxNumber,
-        args: true,
-        requiredArg: true,
     },
 };

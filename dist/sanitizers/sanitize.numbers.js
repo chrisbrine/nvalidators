@@ -45,67 +45,41 @@ function toPercentage(value, decimalDigits = 2) {
 exports.sanitizers = {
     add: {
         func: add,
-        sanitizer: true,
-        args: true,
-        requiredArg: true,
     },
     subtract: {
         func: subtract,
-        sanitizer: true,
-        args: true,
-        requiredArg: true,
     },
     multiply: {
         func: multiply,
-        sanitizer: true,
-        args: true,
-        requiredArg: true,
     },
     divide: {
         func: divide,
-        sanitizer: true,
-        args: true,
-        requiredArg: true,
     },
     round: {
         func: round,
-        sanitizer: true,
     },
     ceil: {
         func: ceil,
-        sanitizer: true,
     },
     floor: {
         func: floor,
-        sanitizer: true,
     },
     abs: {
         func: abs,
-        sanitizer: true,
     },
     pow: {
         func: pow,
-        sanitizer: true,
-        args: true,
-        requiredArg: true,
     },
     sqrt: {
         func: sqrt,
-        sanitizer: true,
     },
     toFixed: {
         func: toFixed,
-        sanitizer: true,
-        args: true,
-        requiredArg: true,
     },
     toMoney: {
         func: toMoney,
-        sanitizer: true,
-        args: true,
     },
     toPercentage: {
         func: toPercentage,
-        sanitizer: true,
     },
 };

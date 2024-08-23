@@ -6,10 +6,13 @@ exports.deleteSanitizers = deleteSanitizers;
 const sanitize_strings_1 = require("./sanitize.strings");
 const sanitize_numbers_1 = require("./sanitize.numbers");
 const sanitize_convert_1 = require("./sanitize.convert");
-exports.sanitizers = Object.assign(Object.assign(Object.assign({}, sanitize_strings_1.sanitizers), sanitize_numbers_1.sanitizers), sanitize_convert_1.sanitizers);
+const sanitize_other_1 = require("./sanitize.other");
+exports.sanitizers = Object.assign(Object.assign(Object.assign(Object.assign({}, sanitize_strings_1.sanitizers), sanitize_numbers_1.sanitizers), sanitize_convert_1.sanitizers), sanitize_other_1.sanitizers);
 function addSanitizers(sanitizerItems) {
     Object.assign(exports.sanitizers, sanitizerItems);
 }
 function deleteSanitizers(name) {
-    delete exports.sanitizers[name];
+    name.forEach(name => {
+        delete exports.sanitizers[name];
+    });
 }

@@ -40,13 +40,11 @@ exports.validators = {
     },
     isObject: {
         func: isObject,
-        args: true,
-        requiredArg: false,
     },
     isBooleanString: {
         func: isBooleanString
     },
     isNumberString: {
         func: isNumberString
-    },
+    }
 };

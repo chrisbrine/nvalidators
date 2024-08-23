@@ -1,3 +1,5 @@
 export interface ICombined {
-    [key: string]: Function;
+    [key: string]: any;
 }
+export type StackProcessorItem = [string, ...any];
+export type StackProcessor = StackProcessorItem[];

@@ -1,6 +1,29 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sanitizers = void 0;
+exports.prefix = prefix;
+exports.suffix = suffix;
+exports.insert = insert;
+exports.trim = trim;
+exports.toLowerCase = toLowerCase;
+exports.toUpperCase = toUpperCase;
+exports.toCapitalize = toCapitalize;
+exports.toCapitalizeWords = toCapitalizeWords;
+exports.toSlug = toSlug;
+exports.toSnakeCase = toSnakeCase;
+exports.toCamelCase = toCamelCase;
+exports.replace = replace;
+exports.escape = escape;
+exports.blacklist = blacklist;
+function prefix(param, prefix) {
+    return prefix + param;
+}
+function suffix(param, suffix) {
+    return param + suffix;
+}
+function insert(param, value, index) {
+    return param.slice(0, index) + value + param.slice(index);
+}
 function trim(param) {
     return param.trim();
 }
@@ -51,52 +74,46 @@ function blacklist(param, blacklist) {
     return result;
 }
 exports.sanitizers = {
+    prefix: {
+        func: prefix,
+    },
+    suffix: {
+        func: suffix,
+    },
+    insert: {
+        func: insert,
+    },
     trim: {
         func: trim,
-        sanitizer: true,
     },
     toLowerCase: {
         func: toLowerCase,
-        sanitizer: true,
     },
     toUpperCase: {
         func: toUpperCase,
-        sanitizer: true,
     },
     toCapitalize: {
         func: toCapitalize,
-        sanitizer: true,
     },
     toCapitalizeWords: {
         func: toCapitalizeWords,
-        sanitizer: true,
     },
     toSlug: {
         func: toSlug,
-        sanitizer: true,
     },
     toSnakeCase: {
         func: toSnakeCase,
-        sanitizer: true,
     },
     toCamelCase: {
         func: toCamelCase,
-        sanitizer: true,
     },
     replace: {
         func: replace,
-        sanitizer: true,
-        args: true,
-        requiredArg: true,
     },
     escape: {
         func: escape,
-        sanitizer: true,
     },
     blacklist: {
         func: blacklist,
-        sanitizer: true,
-        args: true,
-        requiredArg: true,
     },
 };

@@ -1,2 +1,2 @@
-import { Validators } from "../types";
-export declare const sanitizers: Validators<string | number, any, any>;
+import { Sanitizers } from "../types";
+export declare const sanitizers: Sanitizers;

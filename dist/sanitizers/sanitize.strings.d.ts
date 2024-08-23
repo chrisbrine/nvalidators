@@ -1,2 +1,16 @@
-import { Validators } from "../types";
-export declare const sanitizers: Validators<string, any, string>;
+import { Sanitizers } from "../types";
+export declare function prefix(param: string, prefix: string): string;
+export declare function suffix(param: string, suffix: string): string;
+export declare function insert(param: string, value: string, index: number): string;
+export declare function trim(param: string): string;
+export declare function toLowerCase(param: string): string;
+export declare function toUpperCase(param: string): string;
+export declare function toCapitalize(param: string): string;
+export declare function toCapitalizeWords(param: string): string;
+export declare function toSlug(param: string): string;
+export declare function toSnakeCase(param: string): string;
+export declare function toCamelCase(param: string): string;
+export declare function replace(param: string, searchValue: string | string[], replaceValue: string): string;
+export declare function escape(param: string): string;
+export declare function blacklist(param: string, blacklist: string[]): string;
+export declare const sanitizers: Sanitizers;
