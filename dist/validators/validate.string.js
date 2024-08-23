@@ -4,13 +4,14 @@ exports.validators = void 0;
 exports.notEmpty = notEmpty;
 exports.minLength = minLength;
 exports.maxLength = maxLength;
-exports.isLength = isLength;
+exports.betweenLength = betweenLength;
 exports.isEmail = isEmail;
 exports.isUrl = isUrl;
 exports.isUuid = isUuid;
 exports.isDate = isDate;
 exports.isUSPhoneNumber = isUSPhoneNumber;
 exports.isInternationalPhoneNumber = isInternationalPhoneNumber;
+exports.isPhoneNumber = isPhoneNumber;
 exports.regex = regex;
 function notEmpty(param) {
     return param.length > 0;
@@ -21,7 +22,7 @@ function minLength(param, min) {
 function maxLength(param, max) {
     return param.length <= max;
 }
-function isLength(param, min, max) {
+function betweenLength(param, min, max) {
     return param.length >= min && param.length <= max;
 }
 function isEmail(param) {
@@ -42,6 +43,9 @@ function isUSPhoneNumber(param) {
 function isInternationalPhoneNumber(param) {
     return /^\+[\d\s-]+$/.test(param);
 }
+function isPhoneNumber(param) {
+    return isUSPhoneNumber(param) || isInternationalPhoneNumber(param);
+}
 function regex(param, pattern) {
     return new RegExp(pattern).test(param);
 }
@@ -55,8 +59,8 @@ exports.validators = {
     maxLength: {
         func: maxLength,
     },
-    isLength: {
-        func: isLength,
+    betweenLength: {
+        func: betweenLength,
     },
     isEmail: {
         func: isEmail
@@ -75,6 +79,9 @@ exports.validators = {
     },
     isInternationalPhoneNumber: {
         func: isInternationalPhoneNumber
+    },
+    isPhoneNumber: {
+        func: isPhoneNumber
     },
     regex: {
         func: regex,

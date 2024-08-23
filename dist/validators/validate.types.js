@@ -5,10 +5,10 @@ function isString(param) {
     return typeof param === 'string';
 }
 function isNumber(param) {
-    return typeof param === 'number';
+    return typeof param === 'number' || !isNaN(Number(param));
 }
 function isBoolean(param) {
-    return typeof param === 'boolean';
+    return typeof param === 'boolean' || param.toLowerCase() === 'true' || param.toLowerCase() === 'false';
 }
 function isArray(param) {
     return Array.isArray(param);
@@ -18,12 +18,6 @@ function isObject(param, objectName) {
         return Object.prototype.toString.call(param).toLowerCase() === `[object ${objectName.toLowerCase()}]`;
     }
     return typeof param === 'object';
-}
-function isBooleanString(param) {
-    return param.toLowerCase() === 'true' || param.toLowerCase() === 'false';
-}
-function isNumberString(param) {
-    return !isNaN(Number(param));
 }
 exports.validators = {
     isString: {
@@ -41,10 +35,4 @@ exports.validators = {
     isObject: {
         func: isObject,
     },
-    isBooleanString: {
-        func: isBooleanString
-    },
-    isNumberString: {
-        func: isNumberString
-    }
 };

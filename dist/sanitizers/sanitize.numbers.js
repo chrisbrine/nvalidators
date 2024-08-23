@@ -1,6 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sanitizers = void 0;
+exports.add = add;
+exports.subtract = subtract;
+exports.multiply = multiply;
+exports.divide = divide;
+exports.round = round;
+exports.ceil = ceil;
+exports.floor = floor;
+exports.abs = abs;
+exports.pow = pow;
+exports.sqrt = sqrt;
+exports.root = root;
+exports.toFixed = toFixed;
+exports.toMoney = toMoney;
+exports.toPercentage = toPercentage;
 function add(value, min) {
     return Number(value) + min;
 }
@@ -30,6 +44,9 @@ function pow(value, power) {
 }
 function sqrt(value) {
     return Math.sqrt(Number(value));
+}
+function root(value, root) {
+    return Math.pow(Number(value), 1 / root);
 }
 function toFixed(value, digits) {
     return +(Number(value).toFixed(digits));
@@ -72,6 +89,9 @@ exports.sanitizers = {
     },
     sqrt: {
         func: sqrt,
+    },
+    root: {
+        func: root,
     },
     toFixed: {
         func: toFixed,

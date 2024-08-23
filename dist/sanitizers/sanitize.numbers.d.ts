@@ -1,2 +1,16 @@
 import { Sanitizers } from "../types";
+export declare function add(value: string | number, min: number): number;
+export declare function subtract(value: string | number, min: number): number;
+export declare function multiply(value: string | number, min: number): number;
+export declare function divide(value: string | number, min: number): number;
+export declare function round(value: string | number): number;
+export declare function ceil(value: string | number): number;
+export declare function floor(value: string | number): number;
+export declare function abs(value: string | number): number;
+export declare function pow(value: string | number, power: number): number;
+export declare function sqrt(value: string | number): number;
+export declare function root(value: string | number, root: number): number;
+export declare function toFixed(value: string | number, digits: number): number;
+export declare function toMoney(value: string | number, currencyPrefix?: string, currencySuffix?: string, thousandsSep?: string, decimalSep?: string, decimalDigits?: number): string;
+export declare function toPercentage(value: string | number, decimalDigits?: number): string;
 export declare const sanitizers: Sanitizers;
