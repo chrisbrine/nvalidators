@@ -8,7 +8,11 @@
     "build": "tsc && parcel build"
   },
   "keywords": [],
-  "author": "",
+  "author": "strbjun",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisbrine/nvalidators"
+  },
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.5.4"

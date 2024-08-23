@@ -12,7 +12,7 @@ export function maxLength(param: string, max: number): boolean {
   return param.length <= max;
 }
 
-export function isLength(param: string, min: number, max: number): boolean {
+export function betweenLength(param: string, min: number, max: number): boolean {
   return param.length >= min && param.length <= max;
 }
 
@@ -42,6 +42,10 @@ export function isInternationalPhoneNumber(param: string): boolean {
   return /^\+[\d\s-]+$/.test(param);
 }
 
+export function isPhoneNumber(param: string): boolean {
+  return isUSPhoneNumber(param) || isInternationalPhoneNumber(param);
+}
+
 export function regex(param: string, pattern: string): boolean {
   return new RegExp(pattern).test(param);
 }
@@ -56,8 +60,8 @@ export const validators: Validators = {
   maxLength: {
     func: maxLength,
   } as ValidatorWithArgs,
-  isLength: {
-    func: isLength,
+  betweenLength: {
+    func: betweenLength,
   } as ValidatorWithArgs,
   isEmail: {
     func: isEmail
@@ -76,6 +80,9 @@ export const validators: Validators = {
   } as ValidatorWithoutArgs,
   isInternationalPhoneNumber: {
     func: isInternationalPhoneNumber
+  } as ValidatorWithoutArgs,
+  isPhoneNumber: {
+    func: isPhoneNumber
   } as ValidatorWithoutArgs,
   regex: {
     func: regex,
