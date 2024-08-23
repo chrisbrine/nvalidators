@@ -1,0 +1,11 @@
+import { Validators } from "../types";
+export declare function notEmpty(param: string): boolean;
+export declare function minLength(param: string, min: number): boolean;
+export declare function maxLength(param: string, max: number): boolean;
+export declare function isEmail(param: string): boolean;
+export declare function isUrl(param: string): boolean;
+export declare function isUuid(param: string): boolean;
+export declare function isDate(param: string): boolean;
+export declare function isUSPhoneNumber(param: string): boolean;
+export declare function isInternationalPhoneNumber(param: string): boolean;
+export declare const validators: Validators<string, any, boolean>;
