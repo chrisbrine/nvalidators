@@ -1,5 +1,5 @@
 {
-  "name": "nvalidators",
+  "name": "@strbjun/nvalidators",
   "version": "0.1.0",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -7,11 +7,18 @@
   "scripts": {
     "build": "tsc && parcel build"
   },
-  "keywords": ["validation", "validator", "sanitizer", "operator", "stack", "chain"],
+  "keywords": [
+    "validation",
+    "validator",
+    "sanitizer",
+    "operator",
+    "stack",
+    "chain"
+  ],
   "author": "Chris Brine <chrisbrine.web@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chrisbrine/nvalidators"
+    "url": "git+https://github.com/chrisbrine/nvalidators.git"
   },
   "license": "ISC",
   "devDependencies": {
@@ -20,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/chrisbrine/nvalidators/issues"
   },
-  "description": "This creates validator support for any variable using either function chaining or stacks to process while allowing for validators, sanitizers, operators, and can customize it as needed. More enhancements coming soon."
+  "description": "This creates validator support for any variable using either function chaining or stacks to process while allowing for validators, sanitizers, operators, and can customize it as needed. More enhancements coming soon.",
+  "homepage": "https://github.com/chrisbrine/nvalidators#readme"
 }
