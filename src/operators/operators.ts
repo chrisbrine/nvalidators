@@ -3,7 +3,7 @@ import { OperatorParams, Operators } from "../types";
 export function operatorOr(stack: OperatorParams) {
   const [a, b] = [stack.pop(), stack.pop()];
   if (a === undefined || b === undefined) {
-    throw new Error('Invalid operator');
+    throw new Error("Invalid operator");
   }
   stack.push(a || b);
 }
@@ -11,7 +11,7 @@ export function operatorOr(stack: OperatorParams) {
 export function operatorAnd(stack: OperatorParams) {
   const [a, b] = [stack.pop(), stack.pop()];
   if (a === undefined || b === undefined) {
-    throw new Error('Invalid operator');
+    throw new Error("Invalid operator");
   }
   stack.push(a && b);
 }
@@ -19,19 +19,19 @@ export function operatorAnd(stack: OperatorParams) {
 export function operatorNot(stack: OperatorParams) {
   const a = stack.pop();
   if (a === undefined) {
-    throw new Error('Invalid operator');
+    throw new Error("Invalid operator");
   }
   stack.push(!a);
 }
 
 export const operators: Operators = {
-  operatorOr: {
+  or: {
     func: operatorOr,
   },
-  operatorAnd: {
+  and: {
     func: operatorAnd,
   },
-  operatorNot: {
+  not: {
     func: operatorNot,
   },
 };

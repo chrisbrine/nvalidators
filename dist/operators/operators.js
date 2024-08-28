@@ -7,32 +7,32 @@ exports.operatorNot = operatorNot;
 function operatorOr(stack) {
     const [a, b] = [stack.pop(), stack.pop()];
     if (a === undefined || b === undefined) {
-        throw new Error('Invalid operator');
+        throw new Error("Invalid operator");
     }
     stack.push(a || b);
 }
 function operatorAnd(stack) {
     const [a, b] = [stack.pop(), stack.pop()];
     if (a === undefined || b === undefined) {
-        throw new Error('Invalid operator');
+        throw new Error("Invalid operator");
     }
     stack.push(a && b);
 }
 function operatorNot(stack) {
     const a = stack.pop();
     if (a === undefined) {
-        throw new Error('Invalid operator');
+        throw new Error("Invalid operator");
     }
     stack.push(!a);
 }
 exports.operators = {
-    operatorOr: {
+    or: {
         func: operatorOr,
     },
-    operatorAnd: {
+    and: {
         func: operatorAnd,
     },
-    operatorNot: {
+    not: {
         func: operatorNot,
     },
 };
